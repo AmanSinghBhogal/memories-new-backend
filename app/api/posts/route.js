@@ -4,7 +4,7 @@ import PostMessage from "@models/postMessage";
 export const dynamic = "force-dynamic";
 export const revalidate = 1; //revalidate api every 1 second
 
-export const GET = async (req) => {
+export const GET = async (req, res) => {
 
     const page = parseInt(req.nextUrl.searchParams.get("page"));
     const limit = req.nextUrl.searchParams.get("limit");
@@ -19,12 +19,13 @@ export const GET = async (req) => {
         const posts = await PostMessage.find().sort({ _id: -1 }).limit(Limit).skip(StartIndex);
 
         return new Response(JSON.stringify({ data: posts, currentPage: Page, numberOfPages: Math.ceil(TotalPosts/Limit) }), { status: 200 });
+        // res.status(200).json({ data: posts, currentPage: Page, numberOfPages: Math.ceil(TotalPosts/Limit) });
 
         // const posts = await PostMessage.find();
         // return new Response(JSON.stringify(posts), {status: 200});
         
     } catch (error) {
-        
+        console.log(error);
         return new Response("Failed to fetch Post data", { status: 500 });
     }
 }
