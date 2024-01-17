@@ -1,5 +1,5 @@
 <div align="center">
-  <img align="center" src="/assets/images/logo.png" alt="Error 404" height="150">
+  <img align="center" src="/public/assets/images/logo.png" alt="Error 404" height="150">
   <h1 align="center">Memories</h1>
 </div>
 
