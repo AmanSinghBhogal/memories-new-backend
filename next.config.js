@@ -27,13 +27,18 @@ const nextConfig = {
               // Allows for specific methods accepted
               {
                 key: "Access-Control-Allow-Methods",
-                value: "GET, POST, PUT, DELETE, OPTIONS",
+                value: "GET, POST, PATCH, PUT, DELETE, OPTIONS",
               },
               // Allows for specific headers accepted (These are a few standard ones)
-              {
-                key: "Access-Control-Allow-Headers",
-                value: "Content-Type, Authorization",
+              // {
+              //   key: "Access-Control-Allow-Headers",
+              //   value: "Content-Type, Authorization",
+              // },
+              { 
+                key: "Access-Control-Allow-Headers", 
+                value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization" 
               },
+                
             ],
           },
         ];

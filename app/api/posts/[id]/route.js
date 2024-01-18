@@ -8,24 +8,25 @@ export const revalidate = 1; //revalidate api every 1 second
 // Patch Endpoint
 export const PATCH = async (req, { params }) => {
     try {
+        console.log("Request Received!");
         const id = params.id;
         const post = req.body;
 
-        // Checking if the request is authenticated or not:
-        const token = req.headers.authorization.split(" ")[1];
-        const isCustom = token.length < 500;
-        let decodedData;
+        // // Checking if the request is authenticated or not:
+        // const token = req.headers.authorization.split(" ")[1];
+        // const isCustom = token.length < 500;
+        // let decodedData;
 
-        if(token && isCustom)
-        {
-            decodedData = jwt.decode(token, process.env.JWT_SECRET);
-            req.userId = decodedData?.id;
-        }
-        else
-        {
-            decodedData = jwt.decode(token);
-            req.userId = decodedData?.sub;
-        }
+        // if(token && isCustom)
+        // {
+        //     decodedData = jwt.decode(token, process.env.JWT_SECRET);
+        //     req.userId = decodedData?.id;
+        // }
+        // else
+        // {
+        //     decodedData = jwt.decode(token);
+        //     req.userId = decodedData?.sub;
+        // }
 
         await connectToDB();
         if(!mongoose.Types.ObjectId.isValid(id)){
