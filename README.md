@@ -34,7 +34,7 @@ npm i
 ```
 #### Step 4) Once all the dependencies are successfully installed, Run the following Command:
 ```
-npm start
+npm run dev
 ```
 #### Step 5) Once the above steps are done you should get the message:
     You can now view client in the browser.
@@ -51,17 +51,17 @@ CONNECTION__URL = 'mongodb+srv://<Your-User-Name>:<Your-Password>@<Your-MongoDB-
 ```
 #### Step 9) Next Run the following Command: 
 ```
-npm start
+npm run dev
 ```
 #### Step 10) Once the Above steps are completed successfully you should get the message:
   ```Server Running Successfully on port: 5000```
-#### Note: At this point the App that you are running on your local machine is using online deployed API of our Backend to change that go into src/api/index.js and change the URL to the http://localhost:5000/posts, this line should look like:
+#### Note: At this point the App that you are running on your local machine is using online deployed API of our Backend to change that go into src/api/index.js and change the URL to the http://localhost:3000/api/posts, this line should look like:
 ```
-const url = "http://localhost:5000/posts";
+const url = "http://localhost:3000/api/posts";
 ```
 instead of: 
 ```
-const url = "https://memories-api1.herokuapp.com/posts";
+const url = "http://localhost:3000/api/posts";
 ```
 ***
 
