@@ -9,16 +9,16 @@
 ## About Memories:
 Memories is an Web Application where individuals can post their daily interesting Anecdotes. It's a social platform where people can enjoy, share, read, like or dislike the stories of their friends and other people from all around the world.
 
-Backend API: https://memories-api1.herokuapp.com/
+Backend API: [TO BE UPDATED SOON]
 <br>
-Get() Endpoint: https://memories-api1.herokuapp.com/posts
+Get() Endpoint: [TO BE UPDATED SOON]
 <br>
-getPostsBySearch() Endpoint: https://memories-api1.herokuapp.com/posts/search?searchQuery=[POST-TITLE-SEARCH]&tags=[TAG1,TAG2]
+getPostsBySearch() Endpoint: http://localhost:3000/api/posts/search?searchQuery=[POST-TITLE-SEARCH]&tags=[TAG1,TAG2]
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg: https://memories-api1.herokuapp.com/posts/search?searchQuery=none&tags=Tom,Jerry
-GetPostsByPage() Endpoint: https://memories-api1.herokuapp.com/posts?page=[PAGE_NO]&limit=[NO_OF_POST_NEEDED_PER_PAGE]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg: http://localhost:3000/api/posts/search?searchQuery=none&tags=Tom,Jerry
+GetPostsByPage() Endpoint: http://localhost:3000/api/posts?page=[PAGE_NO]&limit=[NO_OF_POST_NEEDED_PER_PAGE]
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg: https://memories-api1.herokuapp.com/posts?page=1&limit=5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg: http://localhost:3000/api/posts?page=1&limit=5
 
 
 ### Steps to Run on Local Machine
